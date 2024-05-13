@@ -1,0 +1,30 @@
+#fishing-pole {
+	background-color: #f0f8ff;
+}
+
+#bar-wrapper {
+	border-width: 3px;
+	border-color: #000000;
+	border-radius: 3px;
+}
+
+#bar {
+	width: 20px;
+}
+
+#progress {
+	width: 10px;
+	border-width: 2px;
+	border-color: #000000;
+	border-radius: 3px;
+}
+
+#progress-value {
+	height: 20%;
+	background-color: yellow;
+}
+
+#bobber {
+	height: 30px;
+	background-color: lightgreen;
+}

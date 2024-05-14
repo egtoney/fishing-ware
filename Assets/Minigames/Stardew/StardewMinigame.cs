@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class StardewMinigame : MonoBehaviour
+public class StardewMinigame : Minigame
 {
+	public GameDirector director;
+	public UIDocument fishingUI;
+
 	private float barHeight = 200 - 6;
 	private float bobberHeight = 30;
 	private float fishHeight = 10;
@@ -21,11 +24,19 @@ public class StardewMinigame : MonoBehaviour
 	private VisualElement fish;
 	private VisualElement progressValue;
 
+	public override MinigameState GetState() {
+		if (percentCaught == 0) {
+			return MinigameState.Failure;
+		} else if (percentCaught == barHeight) {
+			return MinigameState.Success;
+		}
+		return MinigameState.InProgress;
+	}
+
     // Start is called before the first frame update
     void Start()
     {
-        var document = gameObject.GetComponent<UIDocument>();
-		var root = document.rootVisualElement;
+		var root = fishingUI.rootVisualElement;
 
 		bar = root.Query("bar").First();
 		barSpacer = root.Query("bar-filler-bottom").First();

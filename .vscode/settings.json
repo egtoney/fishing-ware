@@ -56,5 +56,9 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "fishing-ware.sln"
+	"dotnet.defaultSolution": "fishing-ware.sln",
+	"cSpell.words": [
+		"Minigame",
+		"minigames"
+	]
 }

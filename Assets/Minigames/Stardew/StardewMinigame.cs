@@ -10,10 +10,13 @@ public class StardewMinigame : Minigame
 
 	private float barHeight = 200 - 6;
 	private float bobberHeight = 30;
+	private float bobberAcceleration = .1f;
 	private float fishHeight = 10;
 
 	private float bobberPosition = 0;
+	private float bobberVelocity = 0;
 	private float fishPosition = 0;
+	private float fishDelay = 0;
 	private float nextFishPosition = 0;
 
 	private float percentCaught = 0;
@@ -24,18 +27,22 @@ public class StardewMinigame : Minigame
 	private VisualElement fish;
 	private VisualElement progressValue;
 
-	public override MinigameState GetState() {
-		if (percentCaught == 0) {
+	public override MinigameState GetState()
+	{
+		if (percentCaught == 0)
+		{
 			return MinigameState.Failure;
-		} else if (percentCaught == barHeight) {
+		}
+		else if (percentCaught == barHeight)
+		{
 			return MinigameState.Success;
 		}
 		return MinigameState.InProgress;
 	}
 
-    // Start is called before the first frame update
-    void Start()
-    {
+	// Start is called before the first frame update
+	void Start()
+	{
 		var root = fishingUI.rootVisualElement;
 
 		bar = root.Query("bar").First();
@@ -43,44 +50,63 @@ public class StardewMinigame : Minigame
 		bobber = root.Query("bobber").First();
 		fish = root.Query("fish").First();
 		progressValue = root.Query("progress-value").First();
-    }
+	}
 
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        // Check if the space bar is pressed
-        if (Input.GetKey(KeyCode.Space))
-        {
-			bobberPosition += 1;
-        } else {
-			bobberPosition -= 1;
-		}
-
+	// Update is called once per frame
+	void FixedUpdate()
+	{
 		// var barHeight = bar.resolvedStyle.height;
 		// var bobberHeight = bobber.resolvedStyle.height;
 		var maxBobberPosition = barHeight - bobberHeight;
 
+		// Check if the space bar is pressed
+		if (Input.GetKey(KeyCode.Space))
+		{
+			bobberVelocity += bobberAcceleration;
+		}
+		else
+		{
+			bobberVelocity -= bobberAcceleration;
+		}
+
+		bobberPosition += bobberVelocity;
+
 		// clip bar position
-		if (bobberPosition < 0) {
+		if (bobberPosition < 0)
+		{
 			bobberPosition = 0;
 		}
-		if (bobberPosition > maxBobberPosition) {
+		if (bobberPosition > maxBobberPosition)
+		{
 			bobberPosition = maxBobberPosition;
 		}
 
-		// move fish around
+		// clip bar velocity
+		if (bobberPosition == 0 || bobberPosition == maxBobberPosition)
+		{
+			bobberVelocity = 0;
+		}
+
+		//// move fish around
 		// var fishHeight = fish.resolvedStyle.height;
 		var maxFishPosition = barHeight - fishHeight;
 
 		// check if at next location
-		if (Mathf.Abs(nextFishPosition - fishPosition) < 0.1) {
-			nextFishPosition = Random.Range(0, maxFishPosition);
+		if (Mathf.Abs(nextFishPosition - fishPosition) < 0.1)
+		{
+			fishDelay -= Time.deltaTime;
+			// wait for fish delay
+			if (fishDelay <= 0) {
+				nextFishPosition = Random.Range(0, maxFishPosition);
+				fishDelay = Random.Range(.5f, 2);
+			}
 		}
 
 		// move to next location
 		var fishDelta = nextFishPosition - fishPosition;
 		// normalize (keeping sign)
-		if (Mathf.Abs(fishDelta) > 1) {
+		if (Mathf.Abs(fishDelta) > 1)
+		{
 			fishDelta /= Mathf.Abs(fishDelta);
 		}
 
@@ -92,20 +118,26 @@ public class StardewMinigame : Minigame
 			fishPosition <= bobberPosition + bobberHeight &&
 			// top of fish is above the bottom of the bar
 			fishPosition + fishHeight >= bobberPosition
-		) {
+		)
+		{
 			percentCaught += 1;
-		} else {
+		}
+		else
+		{
 			percentCaught -= 1;
 		}
 
-		if (percentCaught > barHeight) {
+		if (percentCaught > barHeight)
+		{
 			percentCaught = barHeight;
-		} else if (percentCaught < 0) {
+		}
+		else if (percentCaught < 0)
+		{
 			percentCaught = 0;
 		}
 
 		barSpacer.style.height = bobberPosition;
 		fish.style.bottom = fishPosition;
 		progressValue.style.height = percentCaught;
-    }
+	}
 }

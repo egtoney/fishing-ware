@@ -22,5 +22,10 @@ public class GameDirector : MonoBehaviour
 
 			activeMinigame = Instantiate(minigamePrefab, transform.position, transform.rotation, transform);
 		}
+
+		var state = activeMinigame.GetState();
+		if (state == MinigameState.Success || state == MinigameState.Failure) {
+			Debug.Log(state);
+		}
     }
 }

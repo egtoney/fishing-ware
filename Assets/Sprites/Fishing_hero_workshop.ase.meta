@@ -1,0 +1,603 @@
+fileFormatVersion: 2
+guid: d648428c37d5a3844929ab25f5c9db9d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Fishing_hero_workshop_Frame_0
+    originalName: 
+    pivot: {x: 0.70634925, y: -0.17391306}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 353
+      width: 63
+      height: 46
+    spriteID: 0ecc821d23f64254b9cec7e2a54dda8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 353}
+  - name: Fishing_hero_workshop_Frame_1
+    originalName: 
+    pivot: {x: 0.70454544, y: -0.19047621}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 407
+      width: 66
+      height: 42
+    spriteID: dc60fca3fbef78542807dc279349f406
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 407}
+  - name: Fishing_hero_workshop_Frame_2
+    originalName: 
+    pivot: {x: 0.7089552, y: -0.19512196}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 457
+      width: 67
+      height: 41
+    spriteID: 8efa1778ab9658b408a53b6cad928624
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 457}
+  - name: Fishing_hero_workshop_Frame_3
+    originalName: 
+    pivot: {x: 0.33838385, y: -0.14545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 99
+      height: 55
+    spriteID: fcbba4ea235f23043878980b6615efdd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Fishing_hero_workshop_Frame_4
+    originalName: 
+    pivot: {x: 0.046052657, y: -0.23529413}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 4
+      width: 76
+      height: 34
+    spriteID: 624a4d8f171c3b74ba119cb30a2747fc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 4}
+  - name: Fishing_hero_workshop_Frame_5
+    originalName: 
+    pivot: {x: 0.06521736, y: -0.18181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 192
+      width: 69
+      height: 44
+    spriteID: 5501bbf79086bfe40b61b3b907b2ff7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 192}
+  - name: Fishing_hero_workshop_Frame_6
+    originalName: 
+    pivot: {x: 0.11718749, y: -0.17391306}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 299
+      width: 64
+      height: 46
+    spriteID: 6ba12e447c5082749a3d3901c96d9d73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 299}
+  - name: Fishing_hero_workshop_Frame_7
+    originalName: 
+    pivot: {x: 0.11718749, y: -0.17021278}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 244
+      width: 64
+      height: 47
+    spriteID: d32d744100cfe5b47a74e30462960f7d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 244}
+  - name: Fishing_hero_workshop_Frame_8
+    originalName: 
+    pivot: {x: 0.13709678, y: -0.14545456}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 67
+      width: 62
+      height: 55
+    spriteID: 9adf1ceccda1c4a459440c7a649cf688
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 67}
+  - name: Fishing_hero_workshop_Frame_9
+    originalName: 
+    pivot: {x: 0.13492064, y: -0.14814815}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 130
+      width: 63
+      height: 54
+    spriteID: bf1a254825b261a4db567538fe4b5adc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 130}
+  - name: Fishing_hero_workshop_Frame_10
+    originalName: 
+    pivot: {x: 0.0705128, y: -0.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 46
+      width: 78
+      height: 32
+    spriteID: 0e24e24d9c845784cbfaeda7c5673155
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 46}
+  - name: Fishing_hero_workshop_Frame_11
+    originalName: 
+    pivot: {x: 0.12711863, y: -0.21052633}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 86
+      width: 59
+      height: 38
+    spriteID: b9ddbfcf2515a094e8a6f29a8ea500e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 86}
+  - name: Fishing_hero_workshop_Frame_12
+    originalName: 
+    pivot: {x: 0.1440678, y: -0.30555555}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 178
+      width: 59
+      height: 36
+    spriteID: 7723148ca8ac71f439dedb1a76a8ec77
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 178}
+  - name: Fishing_hero_workshop_Frame_13
+    originalName: 
+    pivot: {x: 0.12711863, y: -0.21052633}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 111
+      y: 132
+      width: 59
+      height: 38
+    spriteID: 6037066958eeb6a49a3f763aed6f2c45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 111, y: 132}
+  - name: Fishing_hero_workshop_Frame_14
+    originalName: 
+    pivot: {x: 0.06250003, y: -0.36363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 78
+      y: 407
+      width: 24
+      height: 33
+    spriteID: 64e3da3127542f047a57c4abe6989315
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 78, y: 407}
+  - name: Fishing_hero_workshop_Frame_15
+    originalName: 
+    pivot: {x: 0.08928576, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 75
+      y: 353
+      width: 28
+      height: 33
+    spriteID: 027faae85e8bd41468e940eb7bff205c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 75, y: 353}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 273206945
+    name: Fishing_hero_workshop
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Fishing_hero_workshop_Frame_0
+      frameIndex: 0
+      additiveSortOrder: 0
+      cellRect:
+        x: 28
+        y: 8
+        width: 63
+        height: 46
+      spriteId: 0ecc821d23f64254b9cec7e2a54dda8d
+    - name: Fishing_hero_workshop_Frame_1
+      frameIndex: 1
+      additiveSortOrder: 0
+      cellRect:
+        x: 26
+        y: 8
+        width: 66
+        height: 42
+      spriteId: dc60fca3fbef78542807dc279349f406
+    - name: Fishing_hero_workshop_Frame_2
+      frameIndex: 2
+      additiveSortOrder: 0
+      cellRect:
+        x: 25
+        y: 8
+        width: 67
+        height: 41
+      spriteId: 8efa1778ab9658b408a53b6cad928624
+    - name: Fishing_hero_workshop_Frame_3
+      frameIndex: 3
+      additiveSortOrder: 0
+      cellRect:
+        x: 39
+        y: 8
+        width: 99
+        height: 55
+      spriteId: fcbba4ea235f23043878980b6615efdd
+    - name: Fishing_hero_workshop_Frame_4
+      frameIndex: 4
+      additiveSortOrder: 0
+      cellRect:
+        x: 69
+        y: 8
+        width: 76
+        height: 34
+      spriteId: 624a4d8f171c3b74ba119cb30a2747fc
+    - name: Fishing_hero_workshop_Frame_5
+      frameIndex: 5
+      additiveSortOrder: 0
+      cellRect:
+        x: 68
+        y: 8
+        width: 69
+        height: 44
+      spriteId: 5501bbf79086bfe40b61b3b907b2ff7d
+    - name: Fishing_hero_workshop_Frame_6
+      frameIndex: 6
+      additiveSortOrder: 0
+      cellRect:
+        x: 65
+        y: 8
+        width: 64
+        height: 46
+      spriteId: 6ba12e447c5082749a3d3901c96d9d73
+    - name: Fishing_hero_workshop_Frame_7
+      frameIndex: 7
+      additiveSortOrder: 0
+      cellRect:
+        x: 65
+        y: 8
+        width: 64
+        height: 47
+      spriteId: d32d744100cfe5b47a74e30462960f7d
+    - name: Fishing_hero_workshop_Frame_8
+      frameIndex: 8
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 8
+        width: 62
+        height: 55
+      spriteId: 9adf1ceccda1c4a459440c7a649cf688
+    - name: Fishing_hero_workshop_Frame_9
+      frameIndex: 9
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 8
+        width: 63
+        height: 54
+      spriteId: bf1a254825b261a4db567538fe4b5adc
+    - name: Fishing_hero_workshop_Frame_10
+      frameIndex: 10
+      additiveSortOrder: 0
+      cellRect:
+        x: 67
+        y: 8
+        width: 78
+        height: 32
+      spriteId: 0e24e24d9c845784cbfaeda7c5673155
+    - name: Fishing_hero_workshop_Frame_11
+      frameIndex: 11
+      additiveSortOrder: 0
+      cellRect:
+        x: 65
+        y: 8
+        width: 59
+        height: 38
+      spriteId: b9ddbfcf2515a094e8a6f29a8ea500e9
+    - name: Fishing_hero_workshop_Frame_12
+      frameIndex: 12
+      additiveSortOrder: 0
+      cellRect:
+        x: 64
+        y: 11
+        width: 59
+        height: 36
+      spriteId: 7723148ca8ac71f439dedb1a76a8ec77
+    - name: Fishing_hero_workshop_Frame_13
+      frameIndex: 13
+      additiveSortOrder: 0
+      cellRect:
+        x: 65
+        y: 8
+        width: 59
+        height: 38
+      spriteId: 6037066958eeb6a49a3f763aed6f2c45
+    - name: Fishing_hero_workshop_Frame_14
+      frameIndex: 14
+      additiveSortOrder: 0
+      cellRect:
+        x: 71
+        y: 12
+        width: 24
+        height: 33
+      spriteId: 64e3da3127542f047a57c4abe6989315
+    - name: Fishing_hero_workshop_Frame_15
+      frameIndex: 15
+      additiveSortOrder: 0
+      cellRect:
+        x: 70
+        y: 11
+        width: 28
+        height: 33
+      spriteId: 027faae85e8bd41468e940eb7bff205c
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 145, y: 63}

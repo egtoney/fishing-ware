@@ -29,19 +29,6 @@ public class StardewMinigame : Minigame
 
 	public override string Name => "Star Fishing";
 
-	public override MinigameState GetState()
-	{
-		if (percentCaught == 0)
-		{
-			return MinigameState.Failure;
-		}
-		else if (percentCaught == barHeight)
-		{
-			return MinigameState.Success;
-		}
-		return MinigameState.InProgress;
-	}
-
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -55,7 +42,7 @@ public class StardewMinigame : Minigame
 	}
 
 	// Update is called once per frame
-	void FixedUpdate()
+	protected override void FixedUpdateGame()
 	{
 		// var barHeight = bar.resolvedStyle.height;
 		// var bobberHeight = bobber.resolvedStyle.height;
@@ -141,5 +128,12 @@ public class StardewMinigame : Minigame
 		barSpacer.style.height = bobberPosition;
 		fish.style.bottom = fishPosition;
 		progressValue.style.height = percentCaught;
+
+		// check for final states
+		if (percentCaught == barHeight) {
+			State = MinigameState.Success;
+		} else if (percentCaught == 0) {
+			State = MinigameState.Failure;
+		}
 	}
 }

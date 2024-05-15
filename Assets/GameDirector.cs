@@ -10,9 +10,11 @@ public class GameDirector : MonoBehaviour
 	public List<Minigame> minigames;
 
 	private Minigame activeMinigame;
-	private float minigameCountdown = 0;
+	private float startMinigameCountdown = 0;
+	private float nextMinigameCountdown = 0;
 
 	private Label countdownUI;
+	private VisualElement countdownWrapperUI;
 	private Label minigameNameUI;
 
     // Start is called before the first frame update
@@ -20,6 +22,7 @@ public class GameDirector : MonoBehaviour
     {
 		var root = transitionUI.rootVisualElement;
 
+		countdownWrapperUI = root.Query("countdown-wrapper").First();
 		countdownUI = root.Query<Label>("countdown").First();
 		minigameNameUI = root.Query<Label>("minigame-name").First();
     }
@@ -27,25 +30,63 @@ public class GameDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		minigameCountdown -= Time.deltaTime;
+		startMinigameCountdown -= Time.deltaTime;
+		nextMinigameCountdown -= Time.deltaTime;
 
-		if (minigameCountdown <= 0) {
-			countdownUI.text = "";
-		} else {
-			var num = Mathf.RoundToInt(minigameCountdown).ToString();
-			if (num == "0") {
-				countdownUI.text = "go!";
-			} else {
-				countdownUI.text = num;
-			}
-		}
-
-        if (activeMinigame == null) {
+		if (
+			// no minigame
+			activeMinigame == null ||
+			// need a new minigame
+			(
+				activeMinigame.State == MinigameState.Done &&
+				nextMinigameCountdown < 0
+			)
+		) {
 			var minigamePrefab = minigames[0];
+
+			// remove from game scene if already in scene
+			if (activeMinigame != null) {
+				Destroy(activeMinigame.gameObject);
+			}
 
 			activeMinigame = Instantiate(minigamePrefab, transform.position, transform.rotation, transform);
 			minigameNameUI.text = activeMinigame.Name;
-			minigameCountdown = 3;
+			startMinigameCountdown = 3;
+		}
+
+		if (activeMinigame.State == MinigameState.Waiting) {
+			if (startMinigameCountdown <= 0) {
+				countdownUI.text = "";
+				countdownWrapperUI.style.display = DisplayStyle.None;
+
+				// start minigame
+				activeMinigame.State = MinigameState.InProgress;
+
+			} else {
+				countdownWrapperUI.style.display = DisplayStyle.Flex;
+				var num = Mathf.RoundToInt(startMinigameCountdown).ToString();
+				if (num == "0") {
+					countdownUI.text = "go!";
+				} else {
+					countdownUI.text = num;
+				}
+			}
+		}
+
+		// check if game is over
+		if (
+			activeMinigame.State == MinigameState.Success ||
+			activeMinigame.State == MinigameState.Failure
+		) {
+			countdownWrapperUI.style.display = DisplayStyle.Flex;
+			nextMinigameCountdown = 1.5f;
+
+			if (activeMinigame.State == MinigameState.Success) {
+				countdownUI.text = "Success!";
+			} else if (activeMinigame.State == MinigameState.Failure) {
+				countdownUI.text = "Failure!";
+			}
+			activeMinigame.State = MinigameState.Done;
 		}
 
 		// var state = activeMinigame.GetState();

@@ -6,10 +6,6 @@ public class HadesMinigame : Minigame
 {
 	public override string Name => "Hell Dive";
 
-	public override MinigameState GetState() {
-		return MinigameState.InProgress;
-	}
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +13,7 @@ public class HadesMinigame : Minigame
     }
 
     // Update is called once per frame
-    void Update()
+	protected override void FixedUpdateGame()
     {
         
     }

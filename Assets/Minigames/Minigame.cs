@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public enum MinigameState {
+	Waiting,
 	InProgress,
 	Success,
-	Failure
+	Failure,
+	Done
 }
 
 public abstract class Minigame : MonoBehaviour
 {
 	public abstract string Name { get; }
-	public abstract MinigameState GetState();
+	public MinigameState State = MinigameState.Waiting;
 
     // Start is called before the first frame update
     void Start()
@@ -20,8 +22,12 @@ public abstract class Minigame : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (State == MinigameState.InProgress) {
+			FixedUpdateGame();
+		}
     }
+
+	protected abstract void FixedUpdateGame();
 }

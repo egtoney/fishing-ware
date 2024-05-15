@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HadesMinigame : Minigame
 {
+	public override string Name => "Hell Dive";
+
 	public override MinigameState GetState() {
 		return MinigameState.InProgress;
 	}

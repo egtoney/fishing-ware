@@ -27,6 +27,8 @@ public class StardewMinigame : Minigame
 	private VisualElement fish;
 	private VisualElement progressValue;
 
+	public override string Name => "Star Fishing";
+
 	public override MinigameState GetState()
 	{
 		if (percentCaught == 0)

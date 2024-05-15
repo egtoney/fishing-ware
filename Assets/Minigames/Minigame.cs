@@ -10,6 +10,7 @@ public enum MinigameState {
 
 public abstract class Minigame : MonoBehaviour
 {
+	public abstract string Name { get; }
 	public abstract MinigameState GetState();
 
     // Start is called before the first frame update

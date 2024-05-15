@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
-    <Style src="project://database/Assets/UI/minigame-stardew.uss?fileID=7433441132597879392&amp;guid=32271b02394af4c1eac8acfc2291da22&amp;type=3#minigame-stardew" />
-    <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center; width: 640px; height: 360px; align-self: auto;">
+    <Style src="project://database/Assets/Minigames/Stardew/minigame-stardew.uss?fileID=7433441132597879392&amp;guid=32271b02394af4c1eac8acfc2291da22&amp;type=3#minigame-stardew" />
+    <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-items: center; justify-content: center; width: 640px; height: 360px; align-self: auto; position: absolute;">
         <ui:VisualElement name="ui-wrapper" style="width: 50px; height: 200px; flex-direction: row;">
             <ui:VisualElement name="fishing-pole" style="flex-grow: 1;" />
             <ui:VisualElement name="bar-wrapper" style="width: 20px;">

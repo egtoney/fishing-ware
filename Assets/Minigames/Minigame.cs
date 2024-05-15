@@ -15,19 +15,13 @@ public abstract class Minigame : MonoBehaviour
 	public abstract string Name { get; }
 	public MinigameState State = MinigameState.Waiting;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
         if (State == MinigameState.InProgress) {
-			FixedUpdateGame();
+			UpdateMinigame();
 		}
     }
 
-	protected abstract void FixedUpdateGame();
+	protected abstract void UpdateMinigame();
 }

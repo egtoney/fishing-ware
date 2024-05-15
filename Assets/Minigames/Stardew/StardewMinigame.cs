@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 public class StardewMinigame : Minigame
 {
+	public override string Name => "Star Fishing";
 	public GameDirector director;
 	public UIDocument fishingUI;
 
@@ -27,8 +28,6 @@ public class StardewMinigame : Minigame
 	private VisualElement fish;
 	private VisualElement progressValue;
 
-	public override string Name => "Star Fishing";
-
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -42,7 +41,7 @@ public class StardewMinigame : Minigame
 	}
 
 	// Update is called once per frame
-	protected override void FixedUpdateGame()
+	protected override void UpdateMinigame()
 	{
 		// var barHeight = bar.resolvedStyle.height;
 		// var bobberHeight = bobber.resolvedStyle.height;

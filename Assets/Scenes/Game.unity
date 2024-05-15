@@ -292,8 +292,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -2035806287
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_Sprite: {fileID: -1164534699, guid: 293d3ed206e9c644c893a2f8ca53199e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -421,8 +421,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionUI: {fileID: 1715890934}
   minigames:
-  - {fileID: 3383300706004070278, guid: 3a396f5bb30f140ddad5cb4cf3a5d408, type: 3}
   - {fileID: 3307159039005173995, guid: e76de16d0efa1404fb32068b88732036, type: 3}
+  - {fileID: 3383300706004070278, guid: 3a396f5bb30f140ddad5cb4cf3a5d408, type: 3}
 --- !u!4 &2011649384
 Transform:
   m_ObjectHideFlags: 0

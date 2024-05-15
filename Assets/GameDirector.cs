@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Assertions;
 using UnityEngine.UIElements;
 
 public class GameDirector : MonoBehaviour
@@ -30,6 +31,8 @@ public class GameDirector : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+		Assert.IsTrue(minigames.Count > 0, "minigames array contains at least one item");
+
 		startMinigameCountdown -= Time.deltaTime;
 		nextMinigameCountdown -= Time.deltaTime;
 

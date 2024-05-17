@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="flex-grow: 1; align-items: center; justify-content: center; width: 640px; height: 480px;">
+        <ui:VisualElement style="width: 200px; height: 45px;">
+            <ui:VisualElement style="align-items: center; height: 20px;">
+                <ui:VisualElement style="flex-grow: 1; position: absolute; width: 100%; height: 100%; background-color: rgb(255, 0, 0);" />
+                <ui:VisualElement style="flex-grow: 1; position: absolute; width: 70%; height: 100%; background-color: rgb(0, 255, 0);" />
+                <ui:VisualElement name="bobber" style="flex-grow: 1; position: absolute; width: 20px; height: 20px; background-color: rgb(255, 255, 255); align-self: flex-start;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:VisualElement style="background-color: rgb(21, 0, 255); height: 15px;">
+                <ui:VisualElement name="fish" style="flex-grow: 1; position: absolute; width: 15px; height: 15px; background-color: rgb(255, 255, 255);" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

@@ -1,8 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/Minigames/minigame-transition.uss?fileID=7433441132597879392&amp;guid=79aaa885cb10c4c85abc95ac359b1c9b&amp;type=3#minigame-transition" />
     <ui:VisualElement name="VisualElement" style="flex-grow: 1; width: 640px; height: 360px; align-items: center; justify-content: center; background-color: rgba(0, 0, 0, 0); position: absolute;">
-        <ui:Label tabindex="-1" text="Minigame Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="minigame-name" class="title" />
-        <ui:VisualElement style="flex-grow: 1;" />
+        <ui:VisualElement style="flex-grow: 1; align-items: center;">
+            <ui:Label tabindex="-1" text="Minigame Name" parse-escape-sequences="true" display-tooltip-when-elided="true" name="minigame-name" class="title" style="position: absolute;" />
+        </ui:VisualElement>
         <ui:VisualElement name="countdown-wrapper" style="flex-grow: 1; width: 100%; justify-content: center; background-color: rgba(0, 0, 0, 0.49); display: flex;">
             <ui:Label tabindex="-1" text="3" parse-escape-sequences="true" display-tooltip-when-elided="true" name="countdown" class="countdown" style="align-self: center;" />
         </ui:VisualElement>

@@ -5393,6 +5393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   transitionUI: {fileID: 1715890934}
   minigames:
+  - {fileID: 501922939600964253, guid: 0257f4e9deb334b2eae72a31945a2f13, type: 3}
   - {fileID: 6351152118630588109, guid: 8a1ec39956da14dfd8db3f60f33199f2, type: 3}
   - {fileID: 8860084035760079839, guid: a47f0e3cf01a64ccca0edfd96bf21557, type: 3}
   - {fileID: 8107390156597104911, guid: 65247512737d1475889e68cacd480334, type: 3}

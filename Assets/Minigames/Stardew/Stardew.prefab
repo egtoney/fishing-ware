@@ -95,5 +95,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   State: 0
   fishingUI: {fileID: 8558952591330903951}
-  fishSpeed: 40
-  catchSpeed: 40
+  fishSpeed: 70
+  catchSpeed: 30

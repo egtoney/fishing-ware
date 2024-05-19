@@ -87,7 +87,7 @@ public class StardewMinigame : Minigame
 			fishDelay -= Time.deltaTime;
 			// wait for fish delay
 			if (fishDelay <= 0) {
-				nextFishPosition = Random.Range(maxFishPosition, maxFishPosition);
+				nextFishPosition = Random.Range(0, maxFishPosition);
 				fishDelay = Random.Range(.5f, 2);
 			}
 		}

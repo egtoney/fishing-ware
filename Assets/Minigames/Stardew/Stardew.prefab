@@ -93,5 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aecd5a20540934020b1ee97769ab00a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  director: {fileID: 0}
+  State: 0
   fishingUI: {fileID: 8558952591330903951}
+  fishSpeed: 40
+  catchSpeed: 40

@@ -8,7 +8,7 @@
                     <ui:VisualElement name="bobber" style="width: 14px; left: 3px; bottom: 3px;" />
                     <ui:VisualElement name="bar-filler-bottom" />
                 </ui:VisualElement>
-                <ui:VisualElement name="fish" style="flex-grow: 1; width: 16px; height: 16px; position: absolute; left: 2px; background-image: url(&quot;project://database/Assets/Sprites/Fish_a_sheet.png?fileID=207984913&amp;guid=b23f692ce8bd09646baeccf7b1d290a0&amp;type=3#Fish_a_sheet_2&quot;); flex-direction: column; rotate: 270deg; top: 4px;" />
+                <ui:VisualElement name="fish" style="flex-grow: 1; width: 16px; height: 16px; position: absolute; left: 2px; background-image: url(&quot;project://database/Assets/Sprites/Fish_a_sheet.png?fileID=207984913&amp;guid=b23f692ce8bd09646baeccf7b1d290a0&amp;type=3#Fish_a_sheet_2&quot;); flex-direction: column; rotate: 270deg; margin-top: 3px; margin-bottom: 3px; bottom: 0;" />
             </ui:VisualElement>
             <ui:VisualElement name="progress" style="flex-direction: column-reverse; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-image: url(&quot;project://database/Assets/Sprites/Stardew_Fishing_UI.png?fileID=-1335083862&amp;guid=70747a67d9af11040acf137b68daffe7&amp;type=3#Stardew_Fishing_UI_1&quot;);">
                 <ui:VisualElement name="progress-value" style="left: 3px; width: 4px; bottom: 3px;" />

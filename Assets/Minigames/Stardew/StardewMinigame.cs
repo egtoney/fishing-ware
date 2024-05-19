@@ -6,13 +6,14 @@ using UnityEngine.UIElements;
 public class StardewMinigame : Minigame
 {
 	public override string Name => "Star Fishing";
-	public GameDirector director;
 	public UIDocument fishingUI;
+	public float fishSpeed = 20;
+	public float catchSpeed = 20;
 
 	private float barHeight = 200 - 6;
 	private float bobberHeight = 30;
 	private float bobberAcceleration = .1f;
-	private float fishHeight = 10;
+	private float fishHeight = 16;
 
 	private float bobberPosition = 0;
 	private float bobberVelocity = 0;
@@ -50,11 +51,11 @@ public class StardewMinigame : Minigame
 		// Check if the space bar is pressed
 		if (Input.GetKey(KeyCode.Space))
 		{
-			bobberVelocity += bobberAcceleration;
+			bobberVelocity += Time.deltaTime * bobberAcceleration;
 		}
 		else
 		{
-			bobberVelocity -= bobberAcceleration;
+			bobberVelocity -= Time.deltaTime * bobberAcceleration;
 		}
 
 		bobberPosition += bobberVelocity;
@@ -80,12 +81,13 @@ public class StardewMinigame : Minigame
 		var maxFishPosition = barHeight - fishHeight;
 
 		// check if at next location
+		Debug.Log(nextFishPosition + " " + fishPosition + " " + fishDelay);
 		if (Mathf.Abs(nextFishPosition - fishPosition) < 0.1)
 		{
 			fishDelay -= Time.deltaTime;
 			// wait for fish delay
 			if (fishDelay <= 0) {
-				nextFishPosition = Random.Range(0, maxFishPosition);
+				nextFishPosition = Random.Range(maxFishPosition, maxFishPosition);
 				fishDelay = Random.Range(.5f, 2);
 			}
 		}
@@ -98,7 +100,7 @@ public class StardewMinigame : Minigame
 			fishDelta /= Mathf.Abs(fishDelta);
 		}
 
-		fishPosition += fishDelta;
+		fishPosition += fishSpeed * Time.deltaTime * fishDelta;
 
 		// check if bobber is covering fish
 		if (
@@ -108,11 +110,11 @@ public class StardewMinigame : Minigame
 			fishPosition + fishHeight >= bobberPosition
 		)
 		{
-			percentCaught += 1;
+			percentCaught += Time.deltaTime * catchSpeed;
 		}
 		else
 		{
-			percentCaught -= 1;
+			percentCaught -= Time.deltaTime * catchSpeed;
 		}
 
 		if (percentCaught > barHeight)

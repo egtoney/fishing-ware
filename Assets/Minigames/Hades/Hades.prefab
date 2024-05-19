@@ -48,6 +48,7 @@ MonoBehaviour:
   State: 0
   bobber: {fileID: 7782814182951555996}
   fishingDuration: 1
+  bobbleAnimator: {fileID: 6684378945999845575}
 --- !u!1 &8531910859729616935
 GameObject:
   m_ObjectHideFlags: 0

@@ -9,6 +9,7 @@ public class HadesMinigame : Minigame
 	public SpriteRenderer bobber;
 
 	public float fishingDuration = 1;
+	public Animator bobbleAnimator;
 
 	private float fishingTimer = 0;
 
@@ -27,8 +28,7 @@ public class HadesMinigame : Minigame
 
 		var inActiveState = fishingTimer <= 0 && fishingTimer >= -fishingDuration;
 
-		// set to inactive color by default
-		bobber.color = inActiveState ? Color.white : Color.blue;
+		bobbleAnimator.SetBool("active", inActiveState);
 
 		// check if space is pressed in window
 		if (Input.GetKeyDown(KeyCode.Space))

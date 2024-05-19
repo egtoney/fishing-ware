@@ -6,7 +6,7 @@
             </ui:VisualElement>
             <ui:VisualElement style="flex-grow: 1;" />
             <ui:VisualElement style="flex-grow: 1; height: 25px;">
-                <ui:VisualElement name="fish" style="flex-grow: 1; position: absolute; width: 18px; height: 18px; background-color: rgba(255, 255, 255, 0); background-image: url(&quot;project://database/Assets/Sprites/Fish_a_sheet.png?fileID=207984913&amp;guid=b23f692ce8bd09646baeccf7b1d290a0&amp;type=3#Fish_a_sheet_2&quot;); justify-content: flex-start; top: 4px; left: 1px;" />
+                <ui:VisualElement name="fish" style="flex-grow: 1; position: absolute; width: 18px; height: 18px; background-color: rgba(255, 255, 255, 0); background-image: url(&quot;project://database/Assets/Sprites/Fish_a_sheet.png?fileID=207984913&amp;guid=b23f692ce8bd09646baeccf7b1d290a0&amp;type=3#Fish_a_sheet_2&quot;); justify-content: flex-start; top: 4px; left: 1px; margin-left: 3px; margin-right: 3px;" />
                 <ui:VisualElement style="background-color: rgba(0, 0, 0, 0.28); border-top-left-radius: 7px; border-top-right-radius: 7px; border-bottom-right-radius: 7px; border-bottom-left-radius: 7px;">
                     <ui:VisualElement style="background-color: rgba(255, 255, 255, 0); height: 25px; background-image: url(&quot;project://database/Assets/Sprites/Albion_ui_sprites.png?fileID=1546417412&amp;guid=882aa139f3cd88245ab85a5684928c32&amp;type=3#Albion_ui_sprites_1&quot;);" />
                 </ui:VisualElement>

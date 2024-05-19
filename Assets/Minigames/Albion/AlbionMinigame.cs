@@ -10,16 +10,15 @@ public class AlbionMinigame : Minigame
 	public float movementSpeed = 80;
 	public float chargeSpeed = 35;
 	public float bobberWidth = 20;
-	public float fishWidth = 15;
+	public float fishWidth = 18;
+	public float failureZoneSize = 15;
 
 	private VisualElement fish;
 	private VisualElement bobber;
 
-	private float maxPosition = 200;
-	private float maxBobberPosition = 200 - 20;
-	private float maxFishPosition = 200 - 20;
+	private float maxPosition = 200 - 8;
 	
-	private float fishPosition = 20;
+	private float fishPosition = 1;
 	
 	private float bobberPosition = 0;
 
@@ -30,14 +29,15 @@ public class AlbionMinigame : Minigame
 		bobber = root.Query("bobber").First();
 		fish = root.Query("fish").First();
 
+		float maxBobberPosition = maxPosition - bobberWidth;
 		bobberPosition = maxBobberPosition / 2f;
     }
 
 	protected override void UpdateMinigame()
 	{
 		// update bounds
-		maxBobberPosition = maxPosition - bobberWidth;
-		maxFishPosition = maxPosition - fishWidth;
+		float maxBobberPosition = maxPosition - bobberWidth;
+		float maxFishPosition = maxPosition - fishWidth;
 
 		// Check if the space bar is pressed
 		var bobberVelocity = Input.GetKey(KeyCode.Space) ? 1 : -1;
@@ -63,7 +63,7 @@ public class AlbionMinigame : Minigame
 			State = MinigameState.Failure;
 		}
 
-		if (bobberPosition < 15 || maxBobberPosition - bobberPosition < 15) {
+		if (bobberPosition < failureZoneSize || maxBobberPosition - bobberPosition < failureZoneSize) {
 			State = MinigameState.Failure;
 		}
 	}

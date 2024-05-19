@@ -38,6 +38,9 @@ public class MarioPartyCastAways : Minigame
 
 	protected override void UpdateMinigame()
 	{
+		//// remove fish
+		fishList.RemoveAll(fish => fish == null);
+		
 		//// update lanes
 		for (int i=0 ; i<lanes.Count ; i++) {
 			var lane = lanes[i];

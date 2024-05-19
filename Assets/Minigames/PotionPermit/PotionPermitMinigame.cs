@@ -68,10 +68,7 @@ public class PotionPermitMinigame : Minigame
 		//// can only pull if fish is happy
 		if (pulling == true && fishHappy == true) {
 			catchPosition -= catchSpeed * Time.deltaTime;
-		}
-
-		// fish swims away when mad
-		if (fishHappy == false) {
+		} else {
 			catchPosition += madSpeed * Time.deltaTime;
 		}
 

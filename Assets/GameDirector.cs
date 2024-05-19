@@ -6,10 +6,11 @@ using UnityEngine.UIElements;
 
 public class GameDirector : MonoBehaviour
 {
+	public bool debugMode;
 	public UIDocument transitionUI;
-
 	public List<Minigame> minigames;
 
+	private int activeMinigameIndex;
 	private Minigame activeMinigame;
 	private float startMinigameCountdown = 0;
 	private float nextMinigameCountdown = 0;
@@ -45,7 +46,21 @@ public class GameDirector : MonoBehaviour
 				nextMinigameCountdown < 0
 			)
 		) {
-			var minigamePrefab = minigames[0];
+			int nextMinigameIndex = -1;
+
+			// randomly choose next minigame but it can't be the same one
+			while (
+				nextMinigameIndex == -1 ||
+				(
+					debugMode == false &&
+					activeMinigameIndex == nextMinigameIndex
+				)
+			) {
+				nextMinigameIndex = Random.Range(0, minigames.Count);
+			}
+			
+			activeMinigameIndex = nextMinigameIndex;
+			var minigamePrefab = minigames[activeMinigameIndex];
 
 			// remove from game scene if already in scene
 			if (activeMinigame != null) {
@@ -91,10 +106,5 @@ public class GameDirector : MonoBehaviour
 			}
 			activeMinigame.State = MinigameState.Done;
 		}
-
-		// var state = activeMinigame.GetState();
-		// if (state != MinigameState.InProgress) {
-		// 	Debug.Log(state);
-		// }
     }
 }

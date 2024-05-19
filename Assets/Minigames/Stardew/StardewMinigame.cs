@@ -81,7 +81,6 @@ public class StardewMinigame : Minigame
 		var maxFishPosition = barHeight - fishHeight;
 
 		// check if at next location
-		Debug.Log(nextFishPosition + " " + fishPosition + " " + fishDelay);
 		if (Mathf.Abs(nextFishPosition - fishPosition) < 0.1)
 		{
 			fishDelay -= Time.deltaTime;

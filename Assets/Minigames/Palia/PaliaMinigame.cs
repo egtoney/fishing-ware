@@ -24,7 +24,7 @@ public class PaliaMinigame : Minigame
 	private float nextFishPosition = 0;
 	private float nextFishDelay = 0;
 	private float catchPosition = 0;
-	private float health = 250;
+	private float health = 300;
 
 	void Start()
     {
@@ -83,7 +83,7 @@ public class PaliaMinigame : Minigame
 		}
 
 		// clip health
-		health = Mathf.Clamp(health, 0, 250);
+		health = Mathf.Clamp(health, 0, 300);
 
 		// check for end states
 		if (health == 0) {

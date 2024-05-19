@@ -16,7 +16,7 @@ public class MoonstoneMinigame : Minigame
 	private float maxDistance = 0;
 	
 	private Vector2 fishPosition = new Vector2(0, 0);
-	private float fishDelay = 1;
+	private float fishDelay = .6f;
 	private Vector2 nextFishPosition = new Vector2(0, 0);
 	
 	private Vector2 bobberPosition = new Vector2(0, 0);
@@ -68,12 +68,17 @@ public class MoonstoneMinigame : Minigame
 			fishDelay -= Time.deltaTime;
 			// wait for fish delay
 			if (fishDelay <= 0) {
-				var angle = Random.Range(-Mathf.PI, Mathf.PI);
-				var distance = Random.Range(0, maxDistance);
-				nextFishPosition = new Vector2(
-					distance * Mathf.Cos(angle),
-					distance * Mathf.Sin(angle)
-				);
+				nextFishPosition = Vector2.zero;
+				while (nextFishPosition == Vector2.zero) {
+					var fishPosition = new Vector2(
+						Random.Range(-maxDistance, maxDistance),
+						Random.Range(-maxDistance, maxDistance)
+					);
+
+					if (fishPosition.magnitude <= maxDistance) {
+						nextFishPosition = fishPosition;
+					}
+				}
 				fishDelay = Random.Range(1f, 2.5f);
 			}
 		}

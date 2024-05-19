@@ -190,7 +190,7 @@ Transform:
   m_GameObject: {fileID: 2718542252309480688}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8, y: -1.84, z: 0}
+  m_LocalPosition: {x: 8, y: -3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -331,8 +331,15 @@ MonoBehaviour:
   fishingUI: {fileID: 3646978377479015626}
   fish: {fileID: 5424693406896147768}
   catchSpeed: 1.25
+  madSpeed: 1
   healthLossSpeed: 125
+  healthGainSpeed: 13
   catchPositionSuccess: -15
+  catchPositionFailure: 4
+  happyMinDuration: 2
+  happyMaxDuration: 3.5
+  madMinDuration: 0.5
+  madMaxDuration: 1.5
   madSprite: {fileID: 299126840634007967}
   happySprite: {fileID: 3884262852836735520}
 --- !u!1 &6766684101598741799

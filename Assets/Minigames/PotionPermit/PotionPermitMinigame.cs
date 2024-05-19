@@ -9,9 +9,15 @@ public class PotionPermitMinigame : Minigame
 	public UIDocument fishingUI;
 	public Transform fish;
 	public float catchSpeed = 1;
+	public float madSpeed = 1;
 	public float healthLossSpeed = 125;
+	public float healthGainSpeed = 13;
 	public float catchPositionSuccess = -15;
 	public float catchPositionFailure = 4;
+	public float happyMinDuration = 2f;
+	public float happyMaxDuration = 3.5f;
+	public float madMinDuration = .5f;
+	public float madMaxDuration = 1.5f;
 	private VisualElement healthBar;
 	public GameObject madSprite;
 	public GameObject happySprite;
@@ -19,7 +25,7 @@ public class PotionPermitMinigame : Minigame
 	private float catchPosition = 0;
 	private float nextInputTimer = 0;
 	private bool fishHappy = false;
-	private float health = 250;
+	private float health = 300;
 
 	void Start()
     {
@@ -37,8 +43,8 @@ public class PotionPermitMinigame : Minigame
 			fishHappy = !fishHappy;
 
 			nextInputTimer = fishHappy
-				? Random.Range(2, 3.5f)
-				: Random.Range(.5f, 1.5f);
+				? Random.Range(happyMinDuration, happyMaxDuration)
+				: Random.Range(madMinDuration, madMaxDuration);
 
 			madSprite.SetActive(fishHappy == false);
 			happySprite.SetActive(fishHappy == true);
@@ -46,15 +52,18 @@ public class PotionPermitMinigame : Minigame
 
 		var pulling = Input.GetKey(KeyCode.Space);
 
+		madSprite.GetComponent<SpriteRenderer>().color = Color.white;
+
 		//// lose health if pulling and fish is not happy
 		if (pulling == true && fishHappy == false) {
 			health -= healthLossSpeed * Time.deltaTime;
+			madSprite.GetComponent<SpriteRenderer>().color = Color.red;
 		} else {
-			health += .1f * healthLossSpeed * Time.deltaTime;
+			health += healthGainSpeed * Time.deltaTime;
 		}
 
 		// clip health
-		health = Mathf.Clamp(health, 0, 250);
+		health = Mathf.Clamp(health, 0, 300);
 
 		//// can only pull if fish is happy
 		if (pulling == true && fishHappy == true) {
@@ -63,7 +72,7 @@ public class PotionPermitMinigame : Minigame
 
 		// fish swims away when mad
 		if (fishHappy == false) {
-			catchPosition += .5f * catchSpeed * Time.deltaTime;
+			catchPosition += madSpeed * Time.deltaTime;
 		}
 
 		healthBar.style.width = health;

@@ -11,6 +11,8 @@ public class PaliaMinigame : Minigame
 	public Transform fish;
 	public float bobberSpeed = 4;
 	public float fishSpeed = 4;
+	public float fishMaxDelay = .4f;
+	public float fishMinDelay = 0f;
 	public float catchSpeed = 1;
 	public float healthLossSpeed = 125;
 	public float catchPositionSuccess = -15;
@@ -44,7 +46,7 @@ public class PaliaMinigame : Minigame
 			// wait for fish delay
 			if (nextFishDelay <= 0) {
 				nextFishPosition = Random.Range(-maxFishPosition, maxFishPosition);
-				nextFishDelay = Random.Range(0, .5f);
+				nextFishDelay = Random.Range(fishMinDelay, fishMaxDelay);
 			}
 		}
 

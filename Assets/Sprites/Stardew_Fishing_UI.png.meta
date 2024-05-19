@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 882aa139f3cd88245ab85a5684928c32
+guid: 70747a67d9af11040acf137b68daffe7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,43 +97,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Albion_ui_sprites_0
+      name: Stardew_Fishing_UI_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 26
-        width: 202
-        height: 16
+        x: 0
+        y: 0
+        width: 20
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e85e19374079136479d3f1c279eb86a1
-      internalID: -627038098
+      spriteID: 6138622523b3e5d4f8aed2df28c4b5c4
+      internalID: 1878320405
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Albion_ui_sprites_1
+      name: Stardew_Fishing_UI_1
       rect:
         serializedVersion: 2
-        x: 1
+        x: 20
         y: 0
-        width: 202
-        height: 25
+        width: 10
+        height: 200
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b15a752855a021c479d06dd4513f704d
-      internalID: 1546417412
+      spriteID: 90f28ccd448c77741b29174d6f86ec07
+      internalID: -1335083862
       vertices: []
       indices: 
       edges: []
@@ -149,8 +149,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Albion_ui_sprites_0: -627038098
-      Albion_ui_sprites_1: 1546417412
+      Stardew_Fishing_UI_0: 1878320405
+      Stardew_Fishing_UI_1: -1335083862
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -2,17 +2,16 @@
     <Style src="project://database/Assets/Minigames/Stardew/minigame-stardew.uss?fileID=7433441132597879392&amp;guid=32271b02394af4c1eac8acfc2291da22&amp;type=3#minigame-stardew" />
     <ui:VisualElement name="VisualElement" style="flex-grow: 1; align-items: center; justify-content: center; width: 640px; height: 360px; align-self: auto; position: absolute;">
         <ui:VisualElement name="ui-wrapper" style="width: 50px; height: 200px; flex-direction: row;">
-            <ui:VisualElement name="fishing-pole" style="flex-grow: 1;" />
-            <ui:VisualElement name="bar-wrapper" style="width: 20px;">
+            <ui:VisualElement name="bar-wrapper" style="width: 20px; background-image: url(&quot;project://database/Assets/Sprites/Stardew_Fishing_UI.png?fileID=1878320405&amp;guid=70747a67d9af11040acf137b68daffe7&amp;type=3#Stardew_Fishing_UI_0&quot;);">
                 <ui:VisualElement name="bar" style="width: 100%; height: 100%;">
                     <ui:VisualElement style="flex-grow: 1;" />
-                    <ui:VisualElement name="bobber" />
+                    <ui:VisualElement name="bobber" style="width: 14px; left: 3px; bottom: 3px;" />
                     <ui:VisualElement name="bar-filler-bottom" />
                 </ui:VisualElement>
-                <ui:VisualElement name="fish" style="flex-grow: 1; width: 10px; height: 10px; background-color: rgb(13, 0, 255); position: absolute; left: 2px;" />
+                <ui:VisualElement name="fish" style="flex-grow: 1; width: 16px; height: 16px; position: absolute; left: 2px; background-image: url(&quot;project://database/Assets/Sprites/Fish_a_sheet.png?fileID=207984913&amp;guid=b23f692ce8bd09646baeccf7b1d290a0&amp;type=3#Fish_a_sheet_2&quot;); flex-direction: column; rotate: 270deg; top: 4px;" />
             </ui:VisualElement>
-            <ui:VisualElement name="progress" style="flex-direction: column-reverse;">
-                <ui:VisualElement name="progress-value" />
+            <ui:VisualElement name="progress" style="flex-direction: column-reverse; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; background-image: url(&quot;project://database/Assets/Sprites/Stardew_Fishing_UI.png?fileID=-1335083862&amp;guid=70747a67d9af11040acf137b68daffe7&amp;type=3#Stardew_Fishing_UI_1&quot;);">
+                <ui:VisualElement name="progress-value" style="left: 3px; width: 4px; bottom: 3px;" />
                 <ui:VisualElement style="flex-grow: 1;" />
             </ui:VisualElement>
         </ui:VisualElement>

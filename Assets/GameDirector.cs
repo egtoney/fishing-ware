@@ -56,9 +56,9 @@ public class GameDirector : MonoBehaviour
 					activeMinigameIndex == nextMinigameIndex
 				)
 			) {
-				nextMinigameIndex = Random.Range(0, minigames.Count);
+				nextMinigameIndex = debugMode ? 0 : Random.Range(0, minigames.Count);
 			}
-			
+
 			activeMinigameIndex = nextMinigameIndex;
 			var minigamePrefab = minigames[activeMinigameIndex];
 

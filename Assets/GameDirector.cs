@@ -13,11 +13,14 @@ public class GameDirector : MonoBehaviour
 	public Animator playerAnimator;
 	public List<Minigame> minigames;
 
+	private float inputDelay = 0;
+	private bool inEndGame = false;
 	private bool inMainMenu = true;
 	private int activeMinigameIndex;
 	private Minigame activeMinigame;
 	private float startMinigameCountdown = 0;
 	private float nextMinigameCountdown = 0;
+	private int minigameSuccessCount = 0;
 
 	private Label countdownUI;
 	private VisualElement countdownWrapperUI;
@@ -39,10 +42,31 @@ public class GameDirector : MonoBehaviour
     {
 		Assert.IsTrue(minigames.Count > 0, "minigames array contains at least one item");
 
+		inputDelay -= Time.deltaTime;
+
 		if (inMainMenu) {
-			if (Input.GetKey(KeyCode.Space)) {
+			if (mainMenuUI.activeSelf == false) {
+				mainMenuUI.SetActive(true);
+			}
+			if (Input.GetKeyDown(KeyCode.Space)) {
 				inMainMenu = false;
 				mainMenuUI.SetActive(false);
+				transitionUI.gameObject.SetActive(true);
+				UpdateUiReferences();
+			}
+			return;
+		}
+
+		if (inEndGame) {
+			if (transitionUI.gameObject.activeSelf == true) {
+				transitionUI.gameObject.SetActive(false);
+			}
+			if (endGameUI.activeSelf == false) {
+				endGameUI.SetActive(true);
+			}
+			if (inputDelay < 0 && Input.GetKeyDown(KeyCode.Space)) {
+				inEndGame = false;
+				endGameUI.SetActive(false);
 				transitionUI.gameObject.SetActive(true);
 				UpdateUiReferences();
 			}
@@ -127,8 +151,11 @@ public class GameDirector : MonoBehaviour
 
 			if (activeMinigame.State == MinigameState.Success) {
 				countdownUI.text = "Success!";
+				minigameSuccessCount++;
 			} else if (activeMinigame.State == MinigameState.Failure) {
 				countdownUI.text = "Failure!";
+				inEndGame = true;
+				inputDelay = 1;
 			}
 			activeMinigame.State = MinigameState.Done;
 		}

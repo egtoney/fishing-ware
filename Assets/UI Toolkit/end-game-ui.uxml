@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement style="width: 640px; height: 360px; position: absolute; align-items: center; justify-content: center;">
+        <ui:VisualElement style="width: 200px; height: 150px; align-items: center; background-color: rgb(0, 139, 255); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);">
+            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                <ui:Label tabindex="-1" text="Failure!" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font: url(&quot;project://database/Assets/UI%20Toolkit/ThaleahFat.ttf?fileID=12800000&amp;guid=72fa0f764975a45f3bf5c4b3108f1705&amp;type=3#ThaleahFat&quot;); -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/ThaleahFat%20SDF.asset?fileID=11400000&amp;guid=1ff1cf5da389e4883a99f89cb9436685&amp;type=2#ThaleahFat SDF&quot;); font-size: 26px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                <ui:Label tabindex="-1" text="Competition Over!" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font: url(&quot;project://database/Assets/UI%20Toolkit/ThaleahFat.ttf?fileID=12800000&amp;guid=72fa0f764975a45f3bf5c4b3108f1705&amp;type=3#ThaleahFat&quot;); -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/ThaleahFat%20SDF.asset?fileID=11400000&amp;guid=1ff1cf5da389e4883a99f89cb9436685&amp;type=2#ThaleahFat SDF&quot;); font-size: 20px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                <ui:Label tabindex="-1" text="fish caught" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font: url(&quot;project://database/Assets/UI%20Toolkit/ThaleahFat.ttf?fileID=12800000&amp;guid=72fa0f764975a45f3bf5c4b3108f1705&amp;type=3#ThaleahFat&quot;); -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/ThaleahFat%20SDF.asset?fileID=11400000&amp;guid=1ff1cf5da389e4883a99f89cb9436685&amp;type=2#ThaleahFat SDF&quot;); font-size: 16px; margin-right: 10px;" />
+                <ui:Label tabindex="-1" text="0" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/ThaleahFat%20SDF.asset?fileID=11400000&amp;guid=1ff1cf5da389e4883a99f89cb9436685&amp;type=2#ThaleahFat SDF&quot;); -unity-font: url(&quot;project://database/Assets/UI%20Toolkit/ThaleahFat.ttf?fileID=12800000&amp;guid=72fa0f764975a45f3bf5c4b3108f1705&amp;type=3#ThaleahFat&quot;); font-size: 16px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:VisualElement style="flex-direction: row; flex-grow: 1;">
+                <ui:Label tabindex="-1" text="press space to try again" parse-escape-sequences="true" display-tooltip-when-elided="true" style="-unity-font: url(&quot;project://database/Assets/UI%20Toolkit/ThaleahFat.ttf?fileID=12800000&amp;guid=72fa0f764975a45f3bf5c4b3108f1705&amp;type=3#ThaleahFat&quot;); -unity-font-definition: url(&quot;project://database/Assets/UI%20Toolkit/ThaleahFat%20SDF.asset?fileID=11400000&amp;guid=1ff1cf5da389e4883a99f89cb9436685&amp;type=2#ThaleahFat SDF&quot;); font-size: 12px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

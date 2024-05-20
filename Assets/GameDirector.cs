@@ -83,6 +83,7 @@ public class GameDirector : MonoBehaviour
 				endGameObject.SetActive(false);
 				transitionUI.gameObject.SetActive(true);
 				UpdateUiReferences();
+				minigameSuccessCount = 0;
 			}
 			return;
 		}

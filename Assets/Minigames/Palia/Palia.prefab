@@ -94,12 +94,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bc25363368694609a0fd292b8ef953e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  director: {fileID: 0}
   State: 0
+  PlayerAnimationShouldCast: 0
+  HideStaticBobble: 1
   fishingUI: {fileID: 7664644709978419762}
   bobber: {fileID: 8771293046061661723}
   fish: {fileID: 7862232346988161946}
   bobberSpeed: 4
   fishSpeed: 2
+  fishMaxDelay: 0.4
+  fishMinDelay: 0
   catchSpeed: 1
   healthLossSpeed: 125
   catchPositionSuccess: -15

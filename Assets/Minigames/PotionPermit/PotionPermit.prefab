@@ -327,7 +327,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ef629db85c646c094f18cc219e1c1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  director: {fileID: 0}
   State: 0
+  PlayerAnimationShouldCast: 0
+  HideStaticBobble: 1
   fishingUI: {fileID: 3646978377479015626}
   fish: {fileID: 5424693406896147768}
   catchSpeed: 1.25

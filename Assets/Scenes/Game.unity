@@ -15420,8 +15420,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   debugMode: 1
-  mainMenuUI: {fileID: 537458035}
-  endGameUI: {fileID: 17292502}
+  mainMenuObject: {fileID: 537458035}
+  endGameObject: {fileID: 17292502}
+  endGameUI: {fileID: 1301373258}
   staticBobble: {fileID: 822533722}
   transitionUI: {fileID: 1715890934}
   playerAnimator: {fileID: 1703780161}

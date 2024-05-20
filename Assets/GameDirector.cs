@@ -6,8 +6,9 @@ using UnityEngine.UIElements;
 public class GameDirector : MonoBehaviour
 {
 	public bool debugMode;
-	public GameObject mainMenuUI;
-	public GameObject endGameUI;
+	public GameObject mainMenuObject;
+	public GameObject endGameObject;
+	public UIDocument endGameUI;
 	public GameObject staticBobble;
 	public UIDocument transitionUI;
 	public Animator playerAnimator;
@@ -26,12 +27,22 @@ public class GameDirector : MonoBehaviour
 	private VisualElement countdownWrapperUI;
 	private Label minigameNameUI;
 
-	private void UpdateUiReferences() {
-		var root = transitionUI.rootVisualElement;
+	private Label successCountUI;
 
-		countdownWrapperUI = root.Query("countdown-wrapper").First();
-		countdownUI = root.Query<Label>("countdown").First();
-		minigameNameUI = root.Query<Label>("minigame-name").First();
+	private void UpdateUiReferences() {
+		var transitionRoot = transitionUI.rootVisualElement;
+
+		if (transitionRoot != null) {
+			countdownWrapperUI = transitionRoot.Query("countdown-wrapper").First();
+			countdownUI = transitionRoot.Query<Label>("countdown").First();
+			minigameNameUI = transitionRoot.Query<Label>("minigame-name").First();
+		}
+
+		var endRoot = endGameUI.rootVisualElement;
+
+		if (endRoot != null) {
+			successCountUI = endRoot.Query<Label>("success-count").First();
+		}
 	}
 
     // Start is called before the first frame update
@@ -45,12 +56,13 @@ public class GameDirector : MonoBehaviour
 		inputDelay -= Time.deltaTime;
 
 		if (inMainMenu) {
-			if (mainMenuUI.activeSelf == false) {
-				mainMenuUI.SetActive(true);
+			if (mainMenuObject.activeSelf == false) {
+				mainMenuObject.SetActive(true);
+				UpdateUiReferences();
 			}
 			if (Input.GetKeyDown(KeyCode.Space)) {
 				inMainMenu = false;
-				mainMenuUI.SetActive(false);
+				mainMenuObject.SetActive(false);
 				transitionUI.gameObject.SetActive(true);
 				UpdateUiReferences();
 			}
@@ -61,12 +73,14 @@ public class GameDirector : MonoBehaviour
 			if (transitionUI.gameObject.activeSelf == true) {
 				transitionUI.gameObject.SetActive(false);
 			}
-			if (endGameUI.activeSelf == false) {
-				endGameUI.SetActive(true);
+			if (endGameObject.activeSelf == false) {
+				endGameObject.SetActive(true);
+				UpdateUiReferences();
+				successCountUI.text = minigameSuccessCount.ToString();
 			}
 			if (inputDelay < 0 && Input.GetKeyDown(KeyCode.Space)) {
 				inEndGame = false;
-				endGameUI.SetActive(false);
+				endGameObject.SetActive(false);
 				transitionUI.gameObject.SetActive(true);
 				UpdateUiReferences();
 			}

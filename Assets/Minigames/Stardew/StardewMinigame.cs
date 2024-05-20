@@ -9,10 +9,10 @@ public class StardewMinigame : Minigame
 	public UIDocument fishingUI;
 	public float fishSpeed = 20;
 	public float catchSpeed = 20;
+	public float bobberAcceleration = .1f;
 
 	private float barHeight = 200 - 6;
 	private float bobberHeight = 30;
-	private float bobberAcceleration = .1f;
 	private float fishHeight = 16;
 
 	private float bobberPosition = 0;

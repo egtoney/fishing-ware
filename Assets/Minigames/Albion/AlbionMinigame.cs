@@ -18,7 +18,8 @@ public class AlbionMinigame : Minigame
 
 	private float maxPosition = 200 - 8;
 	
-	private float fishPosition = 1;
+	private float fishPosition = 10;
+	private float fishVelocity = 0;
 	
 	private float bobberPosition = 0;
 
@@ -47,8 +48,9 @@ public class AlbionMinigame : Minigame
 		bobberPosition = Mathf.Clamp(bobberPosition, 0, maxBobberPosition);
 
 		// move fish
-		var fishVelocity = Input.GetKey(KeyCode.Space) ? 1 : 0;
-		fishPosition += chargeSpeed * Time.deltaTime * fishVelocity;
+		var fishDelta = Input.GetKey(KeyCode.Space) ? 1 : -1;
+		fishVelocity += chargeSpeed * Time.deltaTime * fishDelta;
+		fishPosition += Time.deltaTime * fishVelocity;
 
 		// clip fish position
 		fishPosition = Mathf.Clamp(fishPosition, 0, maxFishPosition);

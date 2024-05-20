@@ -33,6 +33,10 @@ public class MarioPartyCastAwaysFish : MonoBehaviour
 			gameObject.transform.localPosition.z
 		);
 
+		if (up == false) {
+			GetComponent<SpriteRenderer>().flipY = true;
+		}
+
 		if (
 			(up == true && gameObject.transform.position.y >= removeAtY) ||
 			(up == false && gameObject.transform.position.y <= removeAtY)

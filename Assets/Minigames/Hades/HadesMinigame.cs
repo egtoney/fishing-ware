@@ -30,7 +30,7 @@ public class HadesMinigame : Minigame
 
 		var inActiveState = fishingTimer <= 0 && fishingTimer >= -fishingDuration;
 
-		if (wasInActiveState != inActiveState) {
+		if (inActiveState == true && wasInActiveState != inActiveState) {
 			director.PlayerSetToggle("is_alert");
 		}
 

@@ -109,9 +109,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 890768e8344084f2387eb1ad5738d283, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  director: {fileID: 0}
   State: 0
+  PlayerAnimationShouldCast: 0
+  HideStaticBobble: 1
   fullCastTime: 1
   fullCastDistance: 10
+  catchDistance: 0.65
   castSpeed: 4
   fishPrefab: {fileID: 4907290905436523754, guid: 370732c50ef8b4ba093fe1b92356b2b4, type: 3}
   bobberPrefab: {fileID: 8010128757534854038, guid: 66087b1b2ed8e4efd9ded4ee362b8f07, type: 3}

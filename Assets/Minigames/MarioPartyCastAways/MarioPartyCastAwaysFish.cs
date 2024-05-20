@@ -34,7 +34,7 @@ public class MarioPartyCastAwaysFish : MonoBehaviour
 		);
 
 		if (up == false) {
-			GetComponent<SpriteRenderer>().flipY = true;
+			GetComponent<SpriteRenderer>().flipX = true;
 		}
 
 		if (

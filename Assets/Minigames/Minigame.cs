@@ -12,8 +12,11 @@ public enum MinigameState {
 
 public abstract class Minigame : MonoBehaviour
 {
+	public GameDirector director;
 	public abstract string Name { get; }
 	public MinigameState State = MinigameState.Waiting;
+	public bool PlayerAnimationShouldCast;
+	public bool HideStaticBobble;
 
     // Update is called once per frame
     void Update()

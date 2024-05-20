@@ -67,10 +67,12 @@ public class MarioPartyCastAways : Minigame
 
 		//// check for cast
 		if (Input.GetKey(KeyCode.Space)) {
+			director.PlayerSetBool("is_winding", true);
 			if (castStart == 0) {
 				castStart = Time.time;
 			}
 		} else {
+			director.PlayerSetBool("is_winding", false);
 			if (castStart != 0) {
 				float delta = Time.time - castStart;
 

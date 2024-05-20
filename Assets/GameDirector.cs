@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Assertions;
@@ -7,7 +6,11 @@ using UnityEngine.UIElements;
 public class GameDirector : MonoBehaviour
 {
 	public bool debugMode;
+	public GameObject mainMenuUI;
+	public GameObject endGameUI;
+	public GameObject staticBobble;
 	public UIDocument transitionUI;
+	public Animator playerAnimator;
 	public List<Minigame> minigames;
 
 	private int activeMinigameIndex;
@@ -70,6 +73,17 @@ public class GameDirector : MonoBehaviour
 			activeMinigame = Instantiate(minigamePrefab, transform.position, transform.rotation, transform);
 			minigameNameUI.text = activeMinigame.Name;
 			startMinigameCountdown = 3;
+
+			var minigame = activeMinigame.GetComponent<Minigame>();
+			minigame.director = this;
+			if (minigame.PlayerAnimationShouldCast) {
+				PlayerSetToggle("is_cast");
+			}
+			if (minigame.HideStaticBobble) {
+				staticBobble.SetActive(false);
+			} else {
+				staticBobble.SetActive(true);
+			}
 		}
 
 		if (activeMinigame.State == MinigameState.Waiting) {
@@ -107,4 +121,12 @@ public class GameDirector : MonoBehaviour
 			activeMinigame.State = MinigameState.Done;
 		}
     }
+
+	public void PlayerSetBool(string name, bool value) {
+		playerAnimator.SetBool(name, value);
+	}
+
+	public void PlayerSetToggle(string name) {
+		playerAnimator.SetTrigger(name);
+	}
 }

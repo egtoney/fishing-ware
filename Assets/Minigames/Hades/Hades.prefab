@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f8b9203c8ed643b5b0117b396aa880d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  director: {fileID: 0}
   State: 0
+  PlayerAnimationShouldCast: 1
+  HideStaticBobble: 1
   bobber: {fileID: 7782814182951555996}
   fishingDuration: 1
   bobbleAnimator: {fileID: 6684378945999845575}

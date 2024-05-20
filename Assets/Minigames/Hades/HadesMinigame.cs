@@ -24,9 +24,15 @@ public class HadesMinigame : Minigame
 	{
 		Assert.IsNotNull(bobber, "bobber must be set");
 
+		var wasInActiveState = fishingTimer <= 0 && fishingTimer >= -fishingDuration;
+
 		fishingTimer -= Time.deltaTime;
 
 		var inActiveState = fishingTimer <= 0 && fishingTimer >= -fishingDuration;
+
+		if (wasInActiveState != inActiveState) {
+			director.PlayerSetToggle("is_alert");
+		}
 
 		bobbleAnimator.SetBool("active", inActiveState);
 

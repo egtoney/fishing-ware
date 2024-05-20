@@ -98,6 +98,6 @@ MonoBehaviour:
   PlayerAnimationShouldCast: 0
   HideStaticBobble: 0
   fishingUI: {fileID: 8558952591330903951}
-  fishSpeed: 70
+  fishSpeed: 65
   catchSpeed: 30
-  bobberAcceleration: 70
+  bobberAcceleration: 100

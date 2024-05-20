@@ -63,7 +63,7 @@ public class MoonstoneMinigame : Minigame
 		}
 
 		// check if at next location
-		if (Vector2.Distance(fishPosition, nextFishPosition) < 0.1)
+		if (Vector2.Distance(fishPosition, nextFishPosition) < 0.15)
 		{
 			fishDelay -= Time.deltaTime;
 			// wait for fish delay

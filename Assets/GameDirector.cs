@@ -9,6 +9,7 @@ public class GameDirector : MonoBehaviour
 	public GameObject mainMenuObject;
 	public GameObject endGameObject;
 	public UIDocument endGameUI;
+	public GameObject creditsObject;
 	public GameObject staticBobble;
 	public UIDocument transitionUI;
 	public Animator playerAnimator;
@@ -62,6 +63,7 @@ public class GameDirector : MonoBehaviour
 			}
 			if (Input.GetKeyDown(KeyCode.Space)) {
 				inMainMenu = false;
+				creditsObject.SetActive(false);
 				mainMenuObject.SetActive(false);
 				transitionUI.gameObject.SetActive(true);
 				UpdateUiReferences();

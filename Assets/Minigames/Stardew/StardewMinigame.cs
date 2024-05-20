@@ -58,7 +58,7 @@ public class StardewMinigame : Minigame
 			bobberVelocity -= Time.deltaTime * bobberAcceleration;
 		}
 
-		bobberPosition += bobberVelocity;
+		bobberPosition += Time.deltaTime * bobberVelocity;
 
 		// clip bar position
 		if (bobberPosition < 0)

@@ -5404,7 +5404,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0.5
+  m_Value: 0.1575582
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -10510,6 +10510,38 @@ Canvas:
   m_SortingLayerID: -1350731681
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1056146506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056146507}
+  m_Layer: 0
+  m_Name: Credits
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1056146507
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056146506}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.1636033, y: -2.907371, z: 20.91728}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1985311444}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1143823761
 GameObject:
   m_ObjectHideFlags: 0
@@ -16234,12 +16266,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1985311442}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.3, y: -8.97, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 5.463603, y: -6.062629, z: -20.91728}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1056146507}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2011649382
 GameObject:
@@ -16270,10 +16302,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ccf2720858494908acb5d64fe95c496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  debugMode: 1
+  debugMode: 0
   mainMenuObject: {fileID: 537458035}
   endGameObject: {fileID: 17292502}
   endGameUI: {fileID: 1301373258}
+  creditsObject: {fileID: 1056146506}
   staticBobble: {fileID: 822533722}
   transitionUI: {fileID: 1715890934}
   playerAnimator: {fileID: 1703780161}
@@ -16479,4 +16512,4 @@ SceneRoots:
   - {fileID: 1398306932}
   - {fileID: 796090847}
   - {fileID: 474301023}
-  - {fileID: 1985311444}
+  - {fileID: 1056146507}

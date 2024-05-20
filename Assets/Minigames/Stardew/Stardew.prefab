@@ -100,4 +100,4 @@ MonoBehaviour:
   fishingUI: {fileID: 8558952591330903951}
   fishSpeed: 70
   catchSpeed: 30
-  bobberAcceleration: 0.5
+  bobberAcceleration: 70

@@ -13,6 +13,7 @@ public class GameDirector : MonoBehaviour
 	public Animator playerAnimator;
 	public List<Minigame> minigames;
 
+	private bool inMainMenu = true;
 	private int activeMinigameIndex;
 	private Minigame activeMinigame;
 	private float startMinigameCountdown = 0;
@@ -22,20 +23,31 @@ public class GameDirector : MonoBehaviour
 	private VisualElement countdownWrapperUI;
 	private Label minigameNameUI;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+	private void UpdateUiReferences() {
 		var root = transitionUI.rootVisualElement;
 
 		countdownWrapperUI = root.Query("countdown-wrapper").First();
 		countdownUI = root.Query<Label>("countdown").First();
 		minigameNameUI = root.Query<Label>("minigame-name").First();
-    }
+	}
+
+    // Start is called before the first frame update
+    void Start() {}
 
     // Update is called once per frame
     void Update()
     {
 		Assert.IsTrue(minigames.Count > 0, "minigames array contains at least one item");
+
+		if (inMainMenu) {
+			if (Input.GetKey(KeyCode.Space)) {
+				inMainMenu = false;
+				mainMenuUI.SetActive(false);
+				transitionUI.gameObject.SetActive(true);
+				UpdateUiReferences();
+			}
+			return;
+		}
 
 		startMinigameCountdown -= Time.deltaTime;
 		nextMinigameCountdown -= Time.deltaTime;

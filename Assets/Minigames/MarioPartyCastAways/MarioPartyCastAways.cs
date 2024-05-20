@@ -12,7 +12,7 @@ public struct Lane {
 
 public class MarioPartyCastAways : Minigame
 {
-	public override string Name => "Mario Party Fishing";
+	public override string Name => "Mario Carp-ty";
 
 	public float fullCastTime = 2;
 	public float fullCastDistance = 10;

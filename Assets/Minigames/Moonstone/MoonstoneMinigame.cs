@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class MoonstoneMinigame : Minigame
 {
-	public override string Name => "Moon Fishing";
+	public override string Name => "Moonglow Minot";
 	public UIDocument fishingUI;
 	public float movementSpeed = 80;
 	public float chargeSpeed = 35;

@@ -5,7 +5,7 @@ using UnityEngine.Assertions;
 
 public class HadesMinigame : Minigame
 {
-	public override string Name => "Hell Dive";
+	public override string Name => "Hell Dive Tripe";
 	public SpriteRenderer bobber;
 
 	public float fishingDuration = 1;

@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class PotionPermitMinigame : Minigame
 {
-	public override string Name => "Potion Fishing";
+	public override string Name => "Potion Perview Pike";
 	public UIDocument fishingUI;
 	public Transform fish;
 	public float catchSpeed = 1;

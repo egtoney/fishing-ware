@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class PaliaMinigame : Minigame
 {
-	public override string Name => "Palia Fishing";
+	public override string Name => "Palia Tillapia";
 	public UIDocument fishingUI;
 	public Transform bobber;
 	public Transform fish;

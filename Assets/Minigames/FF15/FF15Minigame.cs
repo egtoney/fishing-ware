@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class FF15Minigame : Minigame
 {
-	public override string Name => "FF15 Fishing";
+	public override string Name => "Final Fin";
 	public UIDocument fishingUI;
 	public Transform fish;
 	public float catchSpeed = 1;

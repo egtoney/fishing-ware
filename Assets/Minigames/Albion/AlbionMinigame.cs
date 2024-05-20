@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class AlbionMinigame : Minigame
 {
-	public override string Name => "Albion Fishing";
+	public override string Name => "Albiono Carp";
 	public UIDocument fishingUI;
 	public float movementSpeed = 80;
 	public float chargeSpeed = 35;

@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 public class StardewMinigame : Minigame
 {
-	public override string Name => "Star Fishing";
+	public override string Name => "Starshrew Salmon";
 	public UIDocument fishingUI;
 	public float fishSpeed = 20;
 	public float catchSpeed = 20;

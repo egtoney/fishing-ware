@@ -50,7 +50,7 @@ MonoBehaviour:
   PlayerAnimationShouldCast: 1
   HideStaticBobble: 1
   bobber: {fileID: 7782814182951555996}
-  fishingDuration: 1
+  fishingDuration: 0.5
   bobbleAnimator: {fileID: 6684378945999845575}
 --- !u!1 &8531910859729616935
 GameObject:

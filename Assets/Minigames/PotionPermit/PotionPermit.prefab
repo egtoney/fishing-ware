@@ -334,8 +334,8 @@ MonoBehaviour:
   fishingUI: {fileID: 3646978377479015626}
   fish: {fileID: 5424693406896147768}
   catchSpeed: 1.25
-  madSpeed: 1
-  healthLossSpeed: 125
+  madSpeed: 0.75
+  healthLossSpeed: 375
   healthGainSpeed: 13
   catchPositionSuccess: -15
   catchPositionFailure: 4
